@@ -1,0 +1,3551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lisa Unisex Salon - Luxury Beauty Experience You'll Love. Premium Hair, Skin, Nails, and Bridal Makeup Services in India. Book your appointment today.">
+    <meta name="keywords" content="luxury salon, unisex salon, bridal makeup, hair styling, hair spa, keratin treatment, facial, manicure, pedicure, nail extensions, Indian wedding makeup">
+    <meta name="author" content="Lisa Unisex Salon">
+    <title>Lisa Unisex Salon | Luxury Beauty & Bridal Wellness</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        /* CSS RESET & CUSTOM PROPERTIES */
+        :root {
+            --color-bg-primary: #FAF7F2;     /* Alabaster Beige */
+            --color-bg-secondary: #FFFFFF;   /* Pure White */
+            --color-bg-dark: #111111;        /* Rich Obsidian Black */
+            --color-bg-dark-card: #1E1C18;   /* Dark Gold-Brown */
+            --color-text-primary: #1C1917;   /* Charcoal Black */
+            --color-text-secondary: #6B6259; /* Muted Warm Gray/Brown */
+            --color-text-light: #F5EFEB;     /* Cream White */
+            --color-gold-base: #C5A880;      /* Luxury Soft Gold */
+            --color-gold-accent: #D4AF37;    /* Metallic Bright Gold */
+            --color-gold-dark: #96744C;      /* Deep Bronze Gold */
+            --border-gold-alpha: rgba(197, 168, 128, 0.25);
+            --border-white-alpha: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.75);
+            --glass-bg-dark: rgba(17, 17, 17, 0.85);
+            --shadow-premium: 0 20px 40px rgba(28, 25, 23, 0.05);
+            --shadow-premium-large: 0 30px 60px rgba(28, 25, 23, 0.1);
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--color-bg-primary);
+            color: var(--color-text-primary);
+            font-family: var(--font-sans);
+            font-weight: 400;
+            line-height: 1.6;
+            overflow-x: hidden;
+            letter-spacing: 0.02em;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 500;
+            color: var(--color-text-primary);
+            letter-spacing: 0.03em;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            outline: none;
+        }
+
+        /* CUSTOM UTILITIES */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-accent) 50%, var(--color-gold-base) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-accent) 50%, var(--color-gold-base) 100%);
+        }
+
+        .section-padding {
+            padding: 7.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-padding {
+                padding: 4.5rem 0;
+            }
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4.5rem auto;
+        }
+
+        .section-subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--color-gold-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.75rem;
+            line-height: 1.25;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 2px;
+            background: var(--color-gold-base);
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .section-divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 8px;
+            height: 8px;
+            background: var(--color-gold-accent);
+            border: 2px solid var(--color-bg-primary);
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2.25rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            border-radius: 0;
+            transition: var(--transition-smooth);
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-gold {
+            background-color: var(--color-text-primary);
+            color: var(--color-bg-secondary);
+            border-color: var(--color-text-primary);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-accent) 100%);
+            z-index: -1;
+            transition: opacity 0.4s ease;
+            opacity: 0;
+        }
+
+        .btn-gold:hover {
+            border-color: transparent;
+            color: var(--color-bg-secondary);
+            box-shadow: 0 10px 20px rgba(182, 142, 91, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .btn-gold:hover::before {
+            opacity: 1;
+        }
+
+        .btn-outline {
+            border: 1px solid var(--color-gold-base);
+            color: var(--color-text-primary);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-text-primary);
+            border-color: var(--color-text-primary);
+            color: var(--color-bg-secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-dark {
+            background-color: var(--color-text-primary);
+            color: var(--color-bg-secondary);
+        }
+
+        .btn-dark:hover {
+            background-color: var(--color-gold-base);
+            transform: translateY(-2px);
+        }
+
+        .btn-light {
+            background-color: var(--color-bg-secondary);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-gold-base);
+        }
+
+        .btn-light:hover {
+            background-color: var(--color-text-primary);
+            border-color: var(--color-text-primary);
+            color: var(--color-bg-secondary);
+            transform: translateY(-2px);
+        }
+
+        /* SCROLL ANIMATION CLASS */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* STICKY HEADER & NAVBAR */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            border-bottom: 1px solid transparent;
+        }
+
+        header.scrolled {
+            background-color: var(--glass-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-gold-alpha);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+            padding: 0.5rem 0;
+        }
+
+        header:not(.scrolled) {
+            padding: 1.25rem 0;
+            background-color: rgba(250, 247, 242, 0.4);
+            backdrop-filter: blur(4px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--font-serif);
+            font-size: 1.65rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .logo span {
+            color: var(--color-gold-accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.25rem;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-text-primary);
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--color-gold-accent);
+            transition: var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .btn-nav-book {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.75rem;
+        }
+
+        /* MOBILE MENU TOGGLE */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-text-primary);
+        }
+
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .btn-nav-book {
+                display: none;
+            }
+        }
+
+        /* MOBILE SIDE NAVIGATION OVERLAY */
+        .mobile-nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(28, 25, 23, 0.4);
+            backdrop-filter: blur(8px);
+            z-index: 1001;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .mobile-nav-overlay.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-drawer {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 320px;
+            height: 100%;
+            background-color: var(--color-bg-primary);
+            border-left: 1px solid var(--border-gold-alpha);
+            z-index: 1002;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .mobile-nav-overlay.open .mobile-drawer {
+            right: 0;
+        }
+
+        .drawer-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 3.5rem;
+        }
+
+        .drawer-close {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--color-text-secondary);
+        }
+
+        .mobile-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+        }
+
+        .mobile-menu a {
+            font-size: 1.1rem;
+            font-family: var(--font-serif);
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: var(--color-text-primary);
+            display: block;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--color-gold-accent);
+            padding-left: 5px;
+        }
+
+        .drawer-footer {
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .drawer-footer .btn {
+            width: 100%;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: var(--color-bg-dark);
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to right, rgba(17, 17, 17, 0.9) 25%, rgba(17, 17, 17, 0.5) 100%), 
+                              url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1800&q=80');
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            animation: slowZoom 20s infinite alternate;
+        }
+
+        @keyframes slowZoom {
+            0% { transform: scale(1.05); }
+            100% { transform: scale(1.15); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 750px;
+            color: var(--color-text-light);
+        }
+
+        .hero-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--color-gold-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-tagline::before {
+            content: '';
+            width: 25px;
+            height: 1px;
+            background-color: var(--color-gold-accent);
+        }
+
+        .hero-title {
+            font-size: 4.25rem;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: #FFFFFF;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.75rem;
+            }
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(245, 239, 235, 0.8);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1.25rem;
+            margin-bottom: 4rem;
+        }
+
+        @media (max-width: 576px) {
+            .hero-ctas {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .hero-ctas .btn {
+                width: 100%;
+            }
+        }
+
+        /* TRUST BADGES */
+        .trust-badges {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 2rem;
+            max-width: 900px;
+        }
+
+        @media (max-width: 992px) {
+            .trust-badges {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trust-badges {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        .badge-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .badge-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: rgba(197, 168, 128, 0.15);
+            border: 1px solid rgba(197, 168, 128, 0.3);
+            color: var(--color-gold-accent);
+        }
+
+        .badge-text {
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .about-text-content {
+            padding-right: 2rem;
+        }
+
+        @media (max-width: 992px) {
+            .about-text-content {
+                padding-right: 0;
+            }
+        }
+
+        .about-tagline {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-gold-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .about-title {
+            font-size: 2.75rem;
+            line-height: 1.25;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-paragraph {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .about-feature-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .about-feature-title {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .about-feature-title i {
+            color: var(--color-gold-accent);
+        }
+
+        .about-feature-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            padding-left: 1.75rem;
+        }
+
+        /* ABOUT IMAGES COMPOSITION */
+        .about-img-wrapper {
+            position: relative;
+            padding-bottom: 3.5rem;
+            padding-right: 3.5rem;
+        }
+
+        .about-img-main {
+            border: 1px solid var(--border-gold-alpha);
+            box-shadow: var(--shadow-premium-large);
+            position: relative;
+            z-index: 2;
+        }
+
+        .about-img-main img {
+            width: 100%;
+            height: 520px;
+            object-fit: cover;
+            filter: contrast(1.02) brightness(0.98);
+        }
+
+        .about-img-sub {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 55%;
+            border: 8px solid var(--color-bg-primary);
+            box-shadow: var(--shadow-premium-large);
+            z-index: 3;
+            background-color: var(--color-bg-primary);
+        }
+
+        .about-img-sub img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+        .about-img-frame {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 80%;
+            height: 80%;
+            border: 2px solid var(--color-gold-base);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .about-img-wrapper {
+                padding-bottom: 2rem;
+                padding-right: 2rem;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .about-img-main img {
+                height: 380px;
+            }
+            .about-img-sub img {
+                height: 200px;
+            }
+        }
+
+        /* SERVICES SECTION */
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .tab-btn {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--border-gold-alpha);
+            color: var(--color-text-secondary);
+            padding: 0.75rem 1.75rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .tab-btn:hover,
+        .tab-btn.active {
+            background-color: var(--color-text-primary);
+            border-color: var(--color-text-primary);
+            color: var(--color-bg-secondary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.25rem;
+            transition: var(--transition-smooth);
+        }
+
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .service-card {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--border-gold-alpha);
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-smooth);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-premium-large);
+            border-color: var(--color-gold-base);
+        }
+
+        .service-img-container {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background-color: var(--color-bg-dark);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .service-card:hover .service-img {
+            transform: scale(1.08);
+        }
+
+        .service-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 0.35rem 0.75rem;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--color-gold-dark);
+            border: 1px solid var(--border-gold-alpha);
+        }
+
+        .service-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .service-title {
+            font-size: 1.35rem;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .service-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .service-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid rgba(197, 168, 128, 0.15);
+            padding-top: 1.25rem;
+            margin-top: auto;
+        }
+
+        .service-price-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .price-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-secondary);
+        }
+
+        .price-val {
+            font-size: 1.2rem;
+            font-weight: 700;
+            font-family: var(--font-serif);
+            color: var(--color-gold-dark);
+        }
+
+        .service-book-btn {
+            font-size: 0.75rem;
+            padding: 0.65rem 1.25rem;
+        }
+
+        /* WHY CHOOSE US */
+        .why-choose-us {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            position: relative;
+        }
+
+        .why-choose-us .section-title {
+            color: #FFFFFF;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        @media (max-width: 1024px) {
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .why-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        .why-card {
+            background-color: var(--color-bg-dark-card);
+            border: 1px solid var(--border-white-alpha);
+            padding: 3rem 2.25rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--color-gold-dark), var(--color-gold-accent));
+            opacity: 0;
+            transition: var(--transition-smooth);
+        }
+
+        .why-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-gold-alpha);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .why-card:hover::before {
+            opacity: 1;
+        }
+
+        .why-icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 0;
+            background-color: rgba(197, 168, 128, 0.08);
+            border: 1px solid var(--border-gold-alpha);
+            color: var(--color-gold-accent);
+            margin-bottom: 2rem;
+            transition: var(--transition-smooth);
+        }
+
+        .why-card:hover .why-icon-box {
+            background-color: var(--color-gold-base);
+            color: var(--color-bg-dark);
+            transform: rotateY(180deg);
+        }
+
+        .why-title {
+            font-size: 1.35rem;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .why-desc {
+            font-size: 0.85rem;
+            color: rgba(245, 239, 235, 0.7);
+            line-height: 1.7;
+        }
+
+        /* GALLERY SECTION */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 320px;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: 280px;
+            }
+        }
+
+        /* Masonry sizing effects */
+        .gallery-item.wide {
+            grid-column: span 2;
+        }
+
+        .gallery-item.tall {
+            grid-row: span 2;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-item.wide {
+                grid-column: span 1;
+            }
+            .gallery-item.tall {
+                grid-row: span 1;
+            }
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-gold-alpha);
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(17, 17, 17, 0.85) 0%, rgba(17, 17, 17, 0.2) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: var(--transition-smooth);
+            z-index: 2;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-cat {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-gold-accent);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-name {
+            color: #FFFFFF;
+            font-size: 1.35rem;
+            font-family: var(--font-serif);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-zoom-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #FFFFFF;
+            align-self: flex-start;
+            margin-top: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .gallery-zoom-icon:hover {
+            background-color: var(--color-gold-accent);
+            color: var(--color-bg-dark);
+            border-color: var(--color-gold-accent);
+        }
+
+        /* TEAM SECTION */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                max-width: 450px;
+                margin: 0 auto;
+            }
+        }
+
+        .team-card {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--border-gold-alpha);
+            box-shadow: var(--shadow-premium);
+            overflow: hidden;
+            text-align: center;
+            transition: var(--transition-smooth);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--color-gold-base);
+            box-shadow: var(--shadow-premium-large);
+        }
+
+        .team-img-box {
+            position: relative;
+            height: 380px;
+            overflow: hidden;
+            background-color: var(--color-bg-dark);
+        }
+
+        .team-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .team-card:hover .team-img-box img {
+            transform: scale(1.06);
+        }
+
+        .team-socials {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            background-color: var(--glass-bg-dark);
+            padding: 0.75rem 1.5rem;
+            border-top: 2px solid var(--color-gold-accent);
+            transition: bottom 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            z-index: 3;
+            width: max-content;
+        }
+
+        .team-card:hover .team-socials {
+            bottom: 0;
+        }
+
+        .team-social-link {
+            color: var(--color-text-light);
+            transition: var(--transition-smooth);
+        }
+
+        .team-social-link:hover {
+            color: var(--color-gold-accent);
+        }
+
+        .team-info {
+            padding: 2rem 1.5rem;
+        }
+
+        .team-spec {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--color-gold-dark);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .team-exp {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+        }
+
+        /* PRICING SECTION */
+        .pricing {
+            background-color: var(--color-bg-secondary);
+        }
+
+        .pricing-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 3.5rem;
+            }
+        }
+
+        .pricing-list-wrapper {
+            display: none;
+        }
+
+        .pricing-list-wrapper.active {
+            display: block;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .pricing-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 2.25rem;
+        }
+
+        .pricing-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .pricing-item-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .pricing-item-name {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            font-weight: 500;
+            background-color: var(--color-bg-secondary);
+            padding-right: 0.75rem;
+            z-index: 2;
+        }
+
+        .pricing-item-line {
+            flex-grow: 1;
+            border-bottom: 1px dotted var(--color-gold-base);
+            margin-bottom: 5px;
+            z-index: 1;
+        }
+
+        .pricing-item-price {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--color-gold-dark);
+            background-color: var(--color-bg-secondary);
+            padding-left: 0.75rem;
+            z-index: 2;
+        }
+
+        .pricing-item-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-secondary);
+            max-width: 85%;
+        }
+
+        /* BEST SELLER BOX */
+        .best-seller-box {
+            background-color: var(--color-bg-dark);
+            border: 2px solid var(--color-gold-accent);
+            padding: 3.5rem 2.5rem;
+            color: var(--color-text-light);
+            text-align: center;
+            position: relative;
+            box-shadow: var(--shadow-premium-large);
+        }
+
+        .best-seller-badge {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-accent) 100%);
+            color: var(--color-bg-dark);
+            padding: 0.5rem 2rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .best-seller-title {
+            color: #FFFFFF;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .best-seller-subtitle {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+            color: var(--color-gold-accent);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .best-seller-price {
+            font-size: 3rem;
+            font-family: var(--font-serif);
+            color: #FFFFFF;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .best-seller-price span {
+            font-size: 1rem;
+            font-family: var(--font-sans);
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: line-through;
+            margin-left: 0.75rem;
+        }
+
+        .best-seller-features {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            margin-bottom: 3rem;
+            text-align: left;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .best-seller-features li {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .best-seller-features li i {
+            color: var(--color-gold-accent);
+            flex-shrink: 0;
+        }
+
+        .best-seller-box .btn {
+            width: 100%;
+        }
+
+        /* SPECIAL OFFERS */
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 1200px) {
+            .offers-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .offers-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .offer-card {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--border-gold-alpha);
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-gold-base);
+            box-shadow: var(--shadow-premium-large);
+        }
+
+        .offer-img-box {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .offer-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .offer-card:hover .offer-img-box img {
+            transform: scale(1.08);
+        }
+
+        .offer-discount-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, var(--color-gold-dark) 0%, var(--color-gold-accent) 100%);
+            color: var(--color-bg-dark);
+            padding: 0.35rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .offer-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .offer-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .offer-desc {
+            font-size: 0.8rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .offer-footer {
+            margin-top: auto;
+            border-top: 1px solid rgba(197, 168, 128, 0.1);
+            padding-top: 1rem;
+        }
+
+        .offer-btn {
+            font-size: 0.75rem;
+            width: 100%;
+        }
+
+        /* TESTIMONIALS SECTION */
+        .testimonials {
+            background-color: var(--color-bg-primary);
+        }
+
+        .testimonials-slider-container {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .testimonials-track {
+            display: flex;
+            transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 0 1rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--border-gold-alpha);
+            padding: 4rem 3rem;
+            text-align: center;
+            box-shadow: var(--shadow-premium);
+            position: relative;
+        }
+
+        @media (max-width: 576px) {
+            .testimonial-card {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        .quote-icon {
+            font-size: 3rem;
+            color: rgba(197, 168, 128, 0.25);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            font-family: var(--font-serif);
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            justify-content: center;
+            gap: 0.25rem;
+            color: var(--color-gold-accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-text {
+            font-size: 1.15rem;
+            font-family: var(--font-serif);
+            color: var(--color-text-primary);
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .testimonial-text {
+                font-size: 1rem;
+            }
+        }
+
+        .testimonial-author-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--color-gold-base);
+            box-shadow: var(--shadow-premium);
+        }
+
+        .testimonial-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .testimonial-role {
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .slider-controls {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .slider-arrow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            border: 1px solid var(--border-gold-alpha);
+            background-color: var(--color-bg-secondary);
+            color: var(--color-text-primary);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .slider-arrow:hover {
+            background-color: var(--color-text-primary);
+            border-color: var(--color-text-primary);
+            color: var(--color-bg-secondary);
+        }
+
+        .slider-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .slider-dot {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(197, 168, 128, 0.4);
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .slider-dot.active {
+            width: 24px;
+            background-color: var(--color-gold-dark);
+        }
+
+        /* BOOKING SECTION */
+        .booking-contact-wrapper {
+            background-color: var(--color-bg-dark);
+            color: var(--color-text-light);
+            position: relative;
+            padding: 8rem 0 0 0;
+            overflow: hidden;
+        }
+
+        .booking-contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4.5rem;
+            align-items: flex-start;
+            position: relative;
+            z-index: 5;
+        }
+
+        @media (max-width: 992px) {
+            .booking-contact-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+        }
+
+        .booking-form-container {
+            background-color: var(--color-bg-dark-card);
+            border: 1px solid var(--border-white-alpha);
+            padding: 4rem 3.5rem;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        @media (max-width: 576px) {
+            .booking-form-container {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        .booking-form-title {
+            color: #FFFFFF;
+            font-size: 2.25rem;
+            margin-bottom: 0.75rem;
+            text-align: center;
+        }
+
+        .booking-form-subtitle {
+            font-size: 0.85rem;
+            color: rgba(245, 239, 235, 0.6);
+            margin-bottom: 2.5rem;
+            text-align: center;
+            display: block;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 576px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        @media (max-width: 576px) {
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+        }
+
+        .form-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-gold-accent);
+            font-weight: 600;
+        }
+
+        .form-input, .form-select {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            padding: 0.95rem 1.25rem;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+            width: 100%;
+        }
+
+        .form-input:focus, .form-select:focus {
+            border-color: var(--color-gold-accent);
+            background-color: rgba(255, 255, 255, 0.06);
+        }
+
+        .form-select option {
+            background-color: var(--color-bg-dark-card);
+            color: #FFFFFF;
+        }
+
+        .booking-submit-btn {
+            width: 100%;
+            margin-top: 1rem;
+            padding: 1.1rem;
+        }
+
+        /* CONTACT SECTION & MAP */
+        .contact-info-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3.5rem;
+        }
+
+        .contact-details-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2.25rem;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+        }
+
+        .contact-detail-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--border-gold-alpha);
+            background-color: rgba(197, 168, 128, 0.05);
+            color: var(--color-gold-accent);
+            flex-shrink: 0;
+        }
+
+        .contact-detail-info h4 {
+            color: #FFFFFF;
+            font-size: 1.15rem;
+            margin-bottom: 0.35rem;
+            font-family: var(--font-sans);
+            font-weight: 600;
+        }
+
+        .contact-detail-info p {
+            font-size: 0.9rem;
+            color: rgba(245, 239, 235, 0.7);
+            line-height: 1.6;
+        }
+
+        .contact-social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .contact-social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition-smooth);
+        }
+
+        .contact-social-icon:hover {
+            color: var(--color-gold-accent);
+            border-color: var(--color-gold-accent);
+            background-color: rgba(197, 168, 128, 0.05);
+            transform: translateY(-3px);
+        }
+
+        /* LOCATION MAP SECTION */
+        .map-section {
+            width: 100%;
+            height: 380px;
+            margin-top: 8rem;
+            position: relative;
+            z-index: 10;
+            border-top: 1px solid var(--border-white-alpha);
+        }
+
+        .map-section iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: grayscale(0.9) invert(0.9) contrast(1.1);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0A0A0A;
+            color: rgba(255, 255, 255, 0.55);
+            padding: 5.5rem 0 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3.5rem;
+            margin-bottom: 4.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .footer-logo {
+            color: #FFFFFF;
+            font-size: 1.75rem;
+            font-family: var(--font-serif);
+            font-weight: 700;
+        }
+
+        .footer-logo span {
+            color: var(--color-gold-accent);
+        }
+
+        .footer-about-text {
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        .footer-col-title {
+            color: #FFFFFF;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            position: relative;
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-family: var(--font-sans);
+        }
+
+        .footer-col-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 1px;
+            background-color: var(--color-gold-accent);
+        }
+
+        .footer-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.95rem;
+        }
+
+        .footer-links a {
+            font-size: 0.85rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-gold-accent);
+            padding-left: 5px;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        .footer-contact-item i {
+            color: var(--color-gold-accent);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 576px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--color-gold-accent);
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+            z-index: 999;
+            transition: var(--transition-bounce);
+        }
+
+        .whatsapp-float::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 2px solid #25D366;
+            animation: pulse-ring 2s infinite;
+            z-index: -1;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(15deg);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.45);
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 1; }
+            100% { transform: scale(1.4); opacity: 0; }
+        }
+
+        /* SUCCESS MODAL FOR BOOKINGS */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(17, 17, 17, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition-smooth);
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .success-modal {
+            background-color: var(--color-bg-secondary);
+            border: 1px solid var(--color-gold-base);
+            padding: 3.5rem 3rem;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: var(--shadow-premium-large);
+            transform: translateY(30px);
+            transition: var(--transition-bounce);
+        }
+
+        .modal-overlay.active .success-modal {
+            transform: translateY(0);
+        }
+
+        .success-icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(197, 168, 128, 0.1);
+            color: var(--color-gold-accent);
+            border: 1px solid var(--color-gold-base);
+            border-radius: 50%;
+            margin-bottom: 2rem;
+        }
+
+        .success-title {
+            font-size: 1.85rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message {
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 2.25rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="main-header">
+        <div class="container nav-wrapper">
+            <a href="#home" class="logo">LISA<span>.</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <a href="#booking" class="btn btn-gold btn-nav-book">Book Appointment</a>
+                <button class="mobile-toggle" aria-label="Toggle menu" id="drawer-open-btn">
+                    <i data-lucide="menu" style="width: 28px; height: 28px;"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY DRAWER -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+        <div class="mobile-drawer">
+            <div class="drawer-header">
+                <a href="#home" class="logo">LISA<span>.</span></a>
+                <button class="drawer-close" aria-label="Close menu" id="drawer-close-btn">
+                    <i data-lucide="x" style="width: 28px; height: 28px;"></i>
+                </button>
+            </div>
+            
+            <ul class="mobile-menu">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+                <li><a href="#services" class="mobile-nav-link">Our Services</a></li>
+                <li><a href="#gallery" class="mobile-nav-link">Lookbook Gallery</a></li>
+                <li><a href="#pricing" class="mobile-nav-link">Price List</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="drawer-footer">
+                <a href="#booking" class="btn btn-gold mobile-nav-link">Book Now</a>
+                <a href="https://wa.me/919999999999?text=Hello,%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" class="btn btn-outline" style="gap:0.75rem;">
+                    <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i> WhatsApp Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APP CONTENT -->
+    <main>
+        
+        <!-- HERO SECTION -->
+        <section id="home" class="hero">
+            <div class="hero-bg"></div>
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="hero-content">
+                    <span class="hero-tagline">Welcome to Lisa Unisex Salon</span>
+                    <h1 class="hero-title">Luxury Beauty Experience You'll Love</h1>
+                    <p class="hero-subtitle">Indulge in professional hair, skin, and nail treatments customized for every occasion. Experience global grooming standards crafted with premium care.</p>
+                    
+                    <div class="hero-ctas">
+                        <a href="#booking" class="btn btn-gold">Book Appointment</a>
+                        <a href="https://wa.me/919999999999?text=Hello,%20I%20want%20to%20know%20about%20your%20services." target="_blank" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255, 255, 255, 0.45); background-color: rgba(255,255,255,0.05); backdrop-filter: blur(8px);">
+                            <i data-lucide="message-circle" style="width: 18px; height: 18px;"></i> WhatsApp Now
+                        </a>
+                    </div>
+                    
+                    <div class="trust-badges">
+                        <div class="badge-item">
+                            <span class="badge-icon"><i data-lucide="award" style="width: 16px; height: 16px;"></i></span>
+                            <span class="badge-text">Certified Stylists</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon"><i data-lucide="sparkles" style="width: 16px; height: 16px;"></i></span>
+                            <span class="badge-text">Premium Products</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon"><i data-lucide="shield-check" style="width: 16px; height: 16px;"></i></span>
+                            <span class="badge-text">100% Hygienic</span>
+                        </div>
+                        <div class="badge-item">
+                            <span class="badge-icon"><i data-lucide="smile" style="width: 16px; height: 16px;"></i></span>
+                            <span class="badge-text">1000+ Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section-padding container reveal">
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <span class="about-tagline">Since 2018</span>
+                    <h2 class="about-title">Crafting Beauty With Elegance and Passion</h2>
+                    <p class="about-paragraph">At Lisa Unisex Salon, we believe that self-care is a luxurious necessity. As one of the most premium unisex salons, we bring state-of-the-art styling, global color designs, and professional skin therapeutics under one elegant roof. Our handpicked aesthetic artists understand your individual persona to provide custom, curated transformations.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <h3 class="about-feature-title"><i data-lucide="check" style="width:18px; height:18px;"></i> Experienced Stylists</h3>
+                            <p class="about-feature-desc">Our hair specialists and bridal makeup designers hold international certifications.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <h3 class="about-feature-title"><i data-lucide="check" style="width:18px; height:18px;"></i> Personalized Care</h3>
+                            <p class="about-feature-desc">Every therapy begins with a detailed personal consultation and scalp/skin analysis.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <h3 class="about-feature-title"><i data-lucide="check" style="width:18px; height:18px;"></i> Premium Brands</h3>
+                            <p class="about-feature-desc">We exclusively utilize luxury global systems like L'Oréal Professionnel, Kérastase, and Estée Lauder.</p>
+                        </div>
+                        <div class="about-feature-item">
+                            <h3 class="about-feature-title"><i data-lucide="check" style="width:18px; height:18px;"></i> Serene Ambience</h3>
+                            <p class="about-feature-desc">Unwind within our peaceful, sound-dampened modern space designed for deep relaxation.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#services" class="btn btn-outline">Explore Our Services</a>
+                </div>
+                
+                <div class="about-img-wrapper">
+                    <div class="about-img-frame"></div>
+                    <div class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Lisa Salon Hair Care Styling Session" loading="lazy">
+                    </div>
+                    <div class="about-img-sub">
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Luxury Spa Massage" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="section-padding" style="background-color: var(--color-bg-secondary);">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">Indulge Yourself</span>
+                    <h2 class="section-title">Our Premium Services</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="services-tabs">
+                    <button class="tab-btn active" data-filter="all">All Services</button>
+                    <button class="tab-btn" data-filter="hair">Hair Care</button>
+                    <button class="tab-btn" data-filter="skin">Skin & Facial</button>
+                    <button class="tab-btn" data-filter="nails">Nail Art</button>
+                    <button class="tab-btn" data-filter="makeup">Makeup & Bridal</button>
+                </div>
+                
+                <div class="services-grid" id="services-grid">
+                    
+                    <!-- Service 1: Hair Cut & Styling -->
+                    <div class="service-card" data-category="hair">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Luxury Hair Cut & Styling" loading="lazy">
+                            <span class="service-tag">Hair</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Hair Cut & Creative Styling</h3>
+                            <p class="service-desc">Custom designer cuts, layers, and professional blow-dries tailored specifically to your facial bone structure.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹1,200</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Hair Spa -->
+                    <div class="service-card" data-category="hair">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Hair Spa" loading="lazy">
+                            <span class="service-tag">Hair</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Luxury Kérastase Hair Spa</h3>
+                            <p class="service-desc">Deep nourishing treatment that restores hydration, controls frizz, and stimulates hair follicle growth.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹2,500</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 3: Hair Coloring -->
+                    <div class="service-card" data-category="hair">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80" alt="Hair Coloring" loading="lazy">
+                            <span class="service-tag">Hair</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Global Color & Balayage</h3>
+                            <p class="service-desc">Sophisticated highlights, balayage, or global coloring using premium, ammonia-free protective colors.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹4,500</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 4: Keratin Treatment -->
+                    <div class="service-card" data-category="hair">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1522337094846-8a8101f4648c?auto=format&fit=crop&w=600&q=80" alt="Keratin Treatment" loading="lazy">
+                            <span class="service-tag">Hair</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Brazilian Keratin Infusion</h3>
+                            <p class="service-desc">Intense protein smoothing treatment for silky, perfectly straight, and frizz-free hair that lasts up to 5 months.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹6,000</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 5: Bridal Makeup -->
+                    <div class="service-card" data-category="makeup">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Bridal Makeup" loading="lazy">
+                            <span class="service-tag">Makeup</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Premium Indian Bridal HD Makeup</h3>
+                            <p class="service-desc">A flawless, high-definition bridal glow utilizing premium airbrush techniques and styling.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹18,000</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 6: Party Makeup -->
+                    <div class="service-card" data-category="makeup">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=600&q=80" alt="Party Makeup" loading="lazy">
+                            <span class="service-tag">Makeup</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Celebrity Party Makeup</h3>
+                            <p class="service-desc">Perfect contour, stunning eyes, and customized styling for cocktails, sangeet, and high-fashion galas.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹5,000</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 7: Facial & Cleanup -->
+                    <div class="service-card" data-category="skin">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Facial Cleanup" loading="lazy">
+                            <span class="service-tag">Skin Care</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Esthederm Radiance Facial</h3>
+                            <p class="service-desc">Advanced cellular skin cleanup and hydration therapy to reveal radiant, glowing skin immediately.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹3,500</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 8: Manicure & Pedicure -->
+                    <div class="service-card" data-category="nails">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Manicure Pedicure" loading="lazy">
+                            <span class="service-tag">Nails</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Luxury Rose Petal Pedicure</h3>
+                            <p class="service-desc">Soothing foot soak, organic scrub, detan therapy, massage, and expert nail polishing.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹2,200</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 9: Nail Extensions -->
+                    <div class="service-card" data-category="nails">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Nail Extensions" loading="lazy">
+                            <span class="service-tag">Nails</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Gel/Acrylic Nail Extensions</h3>
+                            <p class="service-desc">Stunning structural extensions complete with custom chrome, glitter, or hand-painted bridal nail art.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹2,800</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 10: Waxing & Threading -->
+                    <div class="service-card" data-category="skin">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Waxing Threading" loading="lazy">
+                            <span class="service-tag">Skin Care</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Rica Luxury Waxing & Brow Art</h3>
+                            <p class="service-desc">Pain-minimizing Italian Rica waxing for full body along with organic antiseptic eyebrow threading.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹1,500</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service 11: Advanced Skin Treatments -->
+                    <div class="service-card" data-category="skin">
+                        <div class="service-img-container">
+                            <img class="service-img" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Skin Treatments" loading="lazy">
+                            <span class="service-tag">Skin Care</span>
+                        </div>
+                        <div class="service-content">
+                            <h3 class="service-title">Advanced Hydrafacial Infusion</h3>
+                            <p class="service-desc">Non-invasive multi-step dermabrasion that clears pores, extracts impurities, and hydrates with peptides.</p>
+                            <div class="service-footer">
+                                <div class="service-price-block">
+                                    <span class="price-label">Starting Price</span>
+                                    <span class="price-val">₹5,500</span>
+                                </div>
+                                <a href="#booking" class="btn btn-gold service-book-btn">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY CHOOSE US SECTION -->
+        <section class="section-padding why-choose-us">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle" style="color: var(--color-gold-accent);">Why Choose Lisa</span>
+                    <h2 class="section-title">The Standard of Excellence</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="why-grid">
+                    <!-- Feature 1 -->
+                    <div class="why-card">
+                        <div class="why-icon-box">
+                            <i data-lucide="award" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <h3 class="why-title">Certified Experts</h3>
+                        <p class="why-desc">Our specialists undergo extensive ongoing training in luxury European and Indian hair-and-skin systems.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="why-card">
+                        <div class="why-icon-box">
+                            <i data-lucide="sparkles" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <h3 class="why-title">Premium Beauty Products</h3>
+                        <p class="why-desc">We use certified organic skin formulas and dermatologically evaluated high-end styling systems.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="why-card">
+                        <div class="why-icon-box">
+                            <i data-lucide="shield-check" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <h3 class="why-title">Hygienic Environment</h3>
+                        <p class="why-desc">We follow surgical-grade UV sterilization procedures for all our equipment and styling tools daily.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="why-card">
+                        <div class="why-icon-box">
+                            <i data-lucide="heart" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <h3 class="why-title">Personalized Consultation</h3>
+                        <p class="why-desc">Our experts conduct deep structural mapping of your skin and hair before advising any treatments.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="why-card">
+                        <div class="why-icon-box">
+                            <i data-lucide="sliders" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <h3 class="why-title">Modern Equipment</h3>
+                        <p class="why-desc">Equipped with luxury automated styling chairs, aesthetic massage tables, and digital scalp analyzers.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="why-card">
+                        <div class="why-icon-box">
+                            <i data-lucide="percent" style="width: 28px; height: 28px;"></i>
+                        </div>
+                        <h3 class="why-title">Value Pricing</h3>
+                        <p class="why-desc">Experience exceptional luxury and premium grade beauty solutions at competitive, clear pricing points.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section id="gallery" class="section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">Our Work & Lookbook</span>
+                    <h2 class="section-title">The Gallery of Glamour</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="gallery-filters">
+                    <button class="tab-btn active" data-gallery-filter="all">All Looks</button>
+                    <button class="tab-btn" data-gallery-filter="interior">Interior</button>
+                    <button class="tab-btn" data-gallery-filter="hair">Hairstyles</button>
+                    <button class="tab-btn" data-gallery-filter="makeup">Makeup & Bridal</button>
+                    <button class="tab-btn" data-gallery-filter="nails">Nail Art</button>
+                </div>
+                
+                <div class="gallery-grid" id="gallery-grid">
+                    
+                    <!-- Item 1: Interior -->
+                    <div class="gallery-item tall" data-gallery-cat="interior">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80" alt="Lisa Salon Premium Interior Lounge" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-cat">Salon Interior</span>
+                            <h3 class="gallery-name">Modern Styling Lounge</h3>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in" style="width: 18px; height: 18px;"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Hairstyle -->
+                    <div class="gallery-item" data-gallery-cat="hair">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=600&q=80" alt="Blonde Balayage Finish" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-cat">Hairstyles</span>
+                            <h3 class="gallery-name">Signature Balayage</h3>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in" style="width: 18px; height: 18px;"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Bridal Look -->
+                    <div class="gallery-item wide" data-gallery-cat="makeup">
+                        <img src="https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=800&q=80" alt="Indian Bridal Glam" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-cat">Makeup & Bridal</span>
+                            <h3 class="gallery-name">Royal Rajkumari Look</h3>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in" style="width: 18px; height: 18px;"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Nail Art -->
+                    <div class="gallery-item" data-gallery-cat="nails">
+                        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80" alt="Glitter Nail Extensions" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-cat">Nail Art</span>
+                            <h3 class="gallery-name">Chrome Nail Extensions</h3>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in" style="width: 18px; height: 18px;"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Bridal Close-up -->
+                    <div class="gallery-item" data-gallery-cat="makeup">
+                        <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80" alt="Classic Bridal Makeup" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-cat">Makeup & Bridal</span>
+                            <h3 class="gallery-name">Classic Traditional Shringar</h3>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in" style="width: 18px; height: 18px;"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Hair spa / Happy client -->
+                    <div class="gallery-item" data-gallery-cat="hair">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80" alt="Premium Hair Styling Client" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-cat">Hairstyles</span>
+                            <h3 class="gallery-name">Curated Hair Blow-Dry</h3>
+                            <div class="gallery-zoom-icon"><i data-lucide="zoom-in" style="width: 18px; height: 18px;"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM SECTION -->
+        <section id="team" class="section-padding" style="background-color: var(--color-bg-secondary);">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">Meet The Stylists</span>
+                    <h2 class="section-title">Our Creative Artists</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="team-grid">
+                    <!-- Stylist 1 -->
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=500&q=80" alt="Vikram Malhotra - Master Hair Stylist" loading="lazy">
+                            <div class="team-socials">
+                                <a href="#" class="team-social-link"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
+                                <a href="#" class="team-social-link"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i></a>
+                                <a href="#" class="team-social-link"><i data-lucide="twitter" style="width: 18px; height: 18px;"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <span class="team-spec">Hair Director</span>
+                            <h3 class="team-name">Vikram Malhotra</h3>
+                            <p class="team-exp">12+ Years Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Stylist 2 -->
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=500&q=80" alt="Priya Sen - Bridal Make-up Designer" loading="lazy">
+                            <div class="team-socials">
+                                <a href="#" class="team-social-link"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
+                                <a href="#" class="team-social-link"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i></a>
+                                <a href="#" class="team-social-link"><i data-lucide="linkedin" style="width: 18px; height: 18px;"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <span class="team-spec">Chief Makeup & Bridal Expert</span>
+                            <h3 class="team-name">Priya Sen</h3>
+                            <p class="team-exp">10+ Years Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Stylist 3 -->
+                    <div class="team-card">
+                        <div class="team-img-box">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Ananya Sharma - Skin & Nails Care Specialist" loading="lazy">
+                            <div class="team-socials">
+                                <a href="#" class="team-social-link"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
+                                <a href="#" class="team-social-link"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i></a>
+                                <a href="#" class="team-social-link"><i data-lucide="twitter" style="width: 18px; height: 18px;"></i></a>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <span class="team-spec">Aesthetic Skin Expert</span>
+                            <h3 class="team-name">Ananya Sharma</h3>
+                            <p class="team-exp">8+ Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="pricing" class="section-padding pricing">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">Exquisite Value</span>
+                    <h2 class="section-title">Pricing Menu</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="pricing-tabs">
+                    <button class="tab-btn active" data-pricing-tab="hair-services">Hair Grooming</button>
+                    <button class="tab-btn" data-pricing-tab="skin-nail">Skin & Nails</button>
+                    <button class="tab-btn" data-pricing-tab="makeup-bridal">Makeup & Bridal</button>
+                </div>
+                
+                <div class="pricing-grid">
+                    <div class="pricing-lists-container">
+                        
+                        <!-- Pricing Category 1: Hair Services -->
+                        <div class="pricing-list-wrapper active" id="hair-services">
+                            <div class="pricing-menu">
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Men's Styling & Haircut</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹800</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Includes therapeutic head wash, massage, styling & custom cut.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Women's Premium Haircut</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹1,200</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Advanced custom layered look with premium L'Oréal wash & blowdry.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Global Hair Color</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹4,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Ammonia-free protective dye for glossy, seamless coverage.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Highlights / Balayage</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹6,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Hand-painted dynamic color transitions and root shadow treatment.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Kérastase Deep Nourishing Spa</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹3,000</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Restorative therapy with highly potent lipid-boost boosters.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Brazilian Keratin / Smoothening</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹7,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Protein realignment that removes frizz, delivering intense gloss.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pricing Category 2: Skin & Nail Services -->
+                        <div class="pricing-list-wrapper" id="skin-nail">
+                            <div class="pricing-menu">
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Esthederm Instant Radiance Facial</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹3,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Hydrating vitamin cleanup returning pristine facial balance.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Advanced Hydrafacial Infusion</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹5,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Dermal deep-cleansing extraction and customized booster serum infusion.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Classic Manicure & Pedicure</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹1,800</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Includes aromatic herbal salt scrub, wrap, and custom polish finish.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Luxury Rose Petal Pedicure</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹2,200</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Soothing floral bath, intense organic exfoliation, and luxury oil massage.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Acrylic Nail Extension Full Set</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹2,800</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Structural gel extensions customized with custom overlays.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Rica Luxury Waxing (Full Body)</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹3,200</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Pain-reducing natural liposoluble wax protecting skin glow.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Pricing Category 3: Makeup & Bridal Services -->
+                        <div class="pricing-list-wrapper" id="makeup-bridal">
+                            <div class="pricing-menu">
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Party Airbrush Makeup</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹6,000</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Featherlight mist airbrush styling for cocktail parties and evening events.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Engagement/Sangeet Makeup</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹10,000</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Flawless traditional HD finish with gorgeous hair braiding & draping.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Traditional Bridal HD Makeup</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹18,000</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Professional photographic definition, hair design, jewelry placement & draping.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Groom Grooming Package</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹6,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Includes advanced gold facial, custom shave, hair design, and styling.</p>
+                                </div>
+                                <div class="pricing-item">
+                                    <div class="pricing-item-header">
+                                        <span class="pricing-item-name">Sari Draping & Styling</span>
+                                        <span class="pricing-item-line"></span>
+                                        <span class="pricing-item-price">₹1,500</span>
+                                    </div>
+                                    <p class="pricing-item-desc">Perfect pleats draping styles tailored according to regional conventions.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Best Seller Box -->
+                    <div class="best-seller-box">
+                        <span class="best-seller-badge">Best Seller</span>
+                        <h3 class="best-seller-title">Lisa Royal Bridal Package</h3>
+                        <span class="best-seller-subtitle">Pre-Bridal & Wedding Day Combo</span>
+                        <div class="best-seller-price">₹24,999<span>₹32,000</span></div>
+                        
+                        <ul class="best-seller-features">
+                            <li><i data-lucide="check-circle-2"></i> Pre-bridal Hair Spa & Facial (3 Days Prior)</li>
+                            <li><i data-lucide="check-circle-2"></i> Bridal Makeup (HD Airbrush)</li>
+                            <li><i data-lucide="check-circle-2"></i> Bridal Hair Styling & Flower Draping</li>
+                            <li><i data-lucide="check-circle-2"></i> Premium Gel Extensions & Nail Art</li>
+                            <li><i data-lucide="check-circle-2"></i> Sari Draping & Jewelry Styling</li>
+                        </ul>
+                        
+                        <a href="#booking" class="btn btn-gold btn-light">Book Package Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPECIAL OFFERS SECTION -->
+        <section class="section-padding">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">Exclusive Deals</span>
+                    <h2 class="section-title">Special Packages & Offers</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="offers-grid">
+                    <!-- Offer 1 -->
+                    <div class="offer-card">
+                        <div class="offer-img-box">
+                            <img src="https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=500&q=80" alt="Royal Indian Bridal Package" loading="lazy">
+                            <span class="offer-discount-badge">Save 25%</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Royal Bridal Glow</h3>
+                            <p class="offer-desc">Complete pre-bridal skin therapy, luxury facial, body polishing, and hair spa bundle.</p>
+                            <div class="offer-footer">
+                                <a href="#booking" class="btn btn-outline offer-btn">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer 2 -->
+                    <div class="offer-card">
+                        <div class="offer-img-box">
+                            <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=500&q=80" alt="Festive Shringar Offer" loading="lazy">
+                            <span class="offer-discount-badge">Flat 20% Off</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Festive Glow Combo</h3>
+                            <p class="offer-desc">Get customized festive hair design, skin cleanup, and organic threading at standard rates.</p>
+                            <div class="offer-footer">
+                                <a href="#booking" class="btn btn-outline offer-btn">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer 3 -->
+                    <div class="offer-card">
+                        <div class="offer-img-box">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=500&q=80" alt="Hair Spa and Styling Combo" loading="lazy">
+                            <span class="offer-discount-badge">Save ₹1,500</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Kérastase Spa & Cut</h3>
+                            <p class="offer-desc">Deep protein lipid booster spa paired with custom creative hair layering session.</p>
+                            <div class="offer-footer">
+                                <a href="#booking" class="btn btn-outline offer-btn">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Offer 4 -->
+                    <div class="offer-card">
+                        <div class="offer-img-box">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Nail extensions Student discount" loading="lazy">
+                            <span class="offer-discount-badge">15% Off</span>
+                        </div>
+                        <div class="offer-content">
+                            <h3 class="offer-title">Student Discount</h3>
+                            <p class="offer-desc">Unlock 15% discount across all haircuts, styling, and acrylic nail extensions with valid ID.</p>
+                            <div class="offer-footer">
+                                <a href="#booking" class="btn btn-outline offer-btn">Claim Offer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonials" class="section-padding testimonials">
+            <div class="container reveal">
+                <div class="section-header">
+                    <span class="section-subtitle">Real Stories</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <div class="section-divider"></div>
+                </div>
+                
+                <div class="testimonials-slider-container">
+                    <div class="testimonials-track" id="testimonials-track">
+                        
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">“</span>
+                                <div class="testimonial-stars">
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                </div>
+                                <p class="testimonial-text">I got my bridal makeup done by Priya at Lisa Salon, and I could not have asked for a better experience. She did a beautiful HD finish that lasted easily all day. The draper styling and hair setup was absolutely royal.</p>
+                                <div class="testimonial-author-box">
+                                    <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1594744803329-e58b31de215f?auto=format&fit=crop&w=150&q=80" alt="Meera Rajput" loading="lazy">
+                                    <h4 class="testimonial-name">Meera Rajput</h4>
+                                    <span class="testimonial-role">Bride (Jaipur)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">“</span>
+                                <div class="testimonial-stars">
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                </div>
+                                <p class="testimonial-text">The L'Oréal global Balayage done by Vikram is exceptional! He matched my skin undertone perfectly and gave me the most modern hair blend. The salon interior feels super luxurious and hygienic.</p>
+                                <div class="testimonial-author-box">
+                                    <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Shreya Sen" loading="lazy">
+                                    <h4 class="testimonial-name">Shreya Sen</h4>
+                                    <span class="testimonial-role">Marketing Lead</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <span class="quote-icon">“</span>
+                                <div class="testimonial-stars">
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                    <i data-lucide="star" style="fill:currentColor; width: 18px; height: 18px;"></i>
+                                </div>
+                                <p class="testimonial-text">I visited for their Luxury Pedicure and Advanced Hydrafacial treatment. The staff is extremely professional, gentle, and the sterilization levels are very reassuring. Easily the best premium salon experience.</p>
+                                <div class="testimonial-author-box">
+                                    <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Rohan Verma" loading="lazy">
+                                    <h4 class="testimonial-name">Rohan Verma</h4>
+                                    <span class="testimonial-role">Corporate VP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <div class="slider-controls">
+                        <button class="slider-arrow" id="slide-prev" aria-label="Previous review">
+                            <i data-lucide="chevron-left" style="width: 20px; height: 20px;"></i>
+                        </button>
+                        <div class="slider-dots" id="slider-dots"></div>
+                        <button class="slider-arrow" id="slide-next" aria-label="Next review">
+                            <i data-lucide="chevron-right" style="width: 20px; height: 20px;"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BOOKING & CONTACT CONTAINER -->
+        <section id="booking" class="booking-contact-wrapper">
+            <div class="container booking-contact-grid reveal">
+                
+                <!-- Appointment Form -->
+                <div class="booking-form-container">
+                    <h2 class="booking-form-title">Book An Appointment</h2>
+                    <span class="booking-form-subtitle">Reserve your luxury beauty slot in less than a minute.</span>
+                    
+                    <form id="appointment-form">
+                        <div class="form-group">
+                            <label class="form-label" for="book-name">Your Full Name *</label>
+                            <input class="form-input" type="text" id="book-name" placeholder="Enter your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="book-phone">Mobile Phone Number *</label>
+                            <input class="form-input" type="tel" id="book-phone" placeholder="Enter 10-digit number" pattern="[6-9][0-9]{9}" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="book-service">Choose Service *</label>
+                            <select class="form-select" id="book-service" required>
+                                <option value="" disabled selected>Select a treatment</option>
+                                <optgroup label="Hair Care">
+                                    <option value="Hair Cut & Styling">Hair Cut & Styling</option>
+                                    <option value="Hair Spa">Luxury Hair Spa</option>
+                                    <option value="Global Color">Global Color & Balayage</option>
+                                    <option value="Keratin Treatment">Keratin Treatment</option>
+                                </optgroup>
+                                <optgroup label="Skin & Nails">
+                                    <option value="Radiance Facial">Radiance Facial Cleanup</option>
+                                    <option value="Advanced Hydrafacial">Advanced Hydrafacial Infusion</option>
+                                    <option value="Manicure/Pedicure">Classic Manicure/Pedicure</option>
+                                    <option value="Nail Extensions">Acrylic Nail Extensions</option>
+                                    <option value="Waxing/Threading">Rica Waxing & Threading</option>
+                                </optgroup>
+                                <optgroup label="Makeup & Bridal">
+                                    <option value="Bridal HD Makeup">Traditional Bridal HD Makeup</option>
+                                    <option value="Party Makeup">Celebrity Party Makeup</option>
+                                    <option value="Sari Draping">Sari Draping & Styling</option>
+                                    <option value="Royal Package">Lisa Royal Bridal Package</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="book-date">Preferred Date *</label>
+                                <input class="form-input" type="date" id="book-date" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="book-time">Preferred Time *</label>
+                                <select class="form-select" id="book-time" required>
+                                    <option value="" disabled selected>Choose slot</option>
+                                    <option value="10:00 AM">10:00 AM - 11:30 AM</option>
+                                    <option value="11:30 AM">11:30 AM - 01:00 PM</option>
+                                    <option value="01:00 PM">01:00 PM - 02:30 PM</option>
+                                    <option value="02:30 PM">02:30 PM - 04:00 PM</option>
+                                    <option value="04:00 PM">04:00 PM - 05:30 PM</option>
+                                    <option value="05:30 PM">05:30 PM - 07:00 PM</option>
+                                    <option value="07:00 PM">07:00 PM - 08:30 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-gold booking-submit-btn">Request Reservation</button>
+                    </form>
+                </div>
+                
+                <!-- Contact Details -->
+                <div class="contact-info-container" id="contact">
+                    <div>
+                        <span class="section-subtitle" style="color: var(--color-gold-accent);">Get In Touch</span>
+                        <h2 class="section-title" style="color: #FFFFFF; font-size: 2.5rem; margin-bottom: 1.5rem;">Connect With Us</h2>
+                        <p style="color: rgba(245, 239, 235, 0.7); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">We are situated in the prime commercial heart of Jaipur. Have any specific requests for customized packages or home visits? Reach out to our concierge services directly.</p>
+                    </div>
+                    
+                    <div class="contact-details-list">
+                        <!-- Contact Item 1 -->
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon"><i data-lucide="phone" style="width:20px; height:20px;"></i></span>
+                            <div class="contact-detail-info">
+                                <h4>Call Concierge</h4>
+                                <p>+91 99999 99999 / +91 141 2234567</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Item 2 -->
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon"><i data-lucide="mail" style="width:20px; height:20px;"></i></span>
+                            <div class="contact-detail-info">
+                                <h4>Email Enquiries</h4>
+                                <p>salon.lisa@gmail.com / booking@lisasalon.com</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Item 3 -->
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon"><i data-lucide="clock" style="width:20px; height:20px;"></i></span>
+                            <div class="contact-detail-info">
+                                <h4>Salon Hours</h4>
+                                <p>Open Daily: 10:00 AM – 08:30 PM (All days open)</p>
+                            </div>
+                        </div>
+
+                        <!-- Contact Item 4 -->
+                        <div class="contact-detail-item">
+                            <span class="contact-detail-icon"><i data-lucide="map-pin" style="width:20px; height:20px;"></i></span>
+                            <div class="contact-detail-info">
+                                <h4>Our Address</h4>
+                                <p>Plot No. 42, Jhalana Chhod, Malviya Nagar Main Road, Jaipur, Rajasthan - 302017</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 style="color: #FFFFFF; font-size: 1.1rem; margin-bottom: 1rem; font-family:var(--font-sans); font-weight:600;">Follow Our Transformations</h4>
+                        <div class="contact-social-icons">
+                            <a href="#" class="contact-social-icon"><i data-lucide="instagram" style="width: 18px; height: 18px;"></i></a>
+                            <a href="#" class="contact-social-icon"><i data-lucide="facebook" style="width: 18px; height: 18px;"></i></a>
+                            <a href="#" class="contact-social-icon"><i data-lucide="youtube" style="width: 18px; height: 18px;"></i></a>
+                            <a href="#" class="contact-social-icon"><i data-lucide="message-circle" style="width: 18px; height: 18px;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Embedded Google Map -->
+            <div class="map-section">
+                <!-- Location: Jhalana Chhod, Jaipur, Rajasthan -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.8459424754714!2d75.8115662762283!3d26.84485747668817!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db60ff5aaaaab%3A0xe5433d7b4d32a900!2sJhalana%20Chhod%2C%20Jaipur%2C%20Rajasthan%20302017!5e0!3m2!1sen!2sin!4v1719999999999!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <span class="footer-logo">LISA<span>.</span></span>
+                <p class="footer-about-text">Delivering premium beauty, customized bridal transformations, and advanced skin grooming therapies at standard international excellence benchmarks in Jaipur.</p>
+                <div class="contact-social-icons">
+                    <a href="#" class="contact-social-icon" style="width:36px; height:36px;"><i data-lucide="instagram" style="width:16px; height:16px;"></i></a>
+                    <a href="#" class="contact-social-icon" style="width:36px; height:36px;"><i data-lucide="facebook" style="width:16px; height:16px;"></i></a>
+                    <a href="#" class="contact-social-icon" style="width:36px; height:36px;"><i data-lucide="youtube" style="width:16px; height:16px;"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#gallery">Lookbook Gallery</a></li>
+                    <li><a href="#pricing">Price Menu</a></li>
+                    <li><a href="#booking">Book Appointment</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-col-title">Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Creative Hair Styling</a></li>
+                    <li><a href="#services">Kérastase Hair Spa</a></li>
+                    <li><a href="#services">Bridal HD Makeup</a></li>
+                    <li><a href="#services">Advanced Hydrafacials</a></li>
+                    <li><a href="#services">Acrylic Extensions</a></li>
+                    <li><a href="#services">Rica Organic Waxing</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-col-title">Contact Info</h4>
+                <ul class="footer-links">
+                    <li class="footer-contact-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Plot 42, Jhalana Chhod, Malviya Nagar Main Rd, Jaipur, RAJ - 302017</span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>+91 99999 99999</span>
+                    </li>
+                    <li class="footer-contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>booking@lisasalon.com</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Lisa Unisex Salon. All Rights Reserved. Designed for Luxury.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/919999999999?text=Hello%20Lisa%20Salon!%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment." target="_blank" class="whatsapp-float" aria-label="Book on WhatsApp">
+        <i data-lucide="message-circle" style="width: 32px; height: 32px; fill: currentColor;"></i>
+    </a>
+
+    <!-- SUCCESS BOOKING MODAL -->
+    <div class="modal-overlay" id="success-modal-overlay">
+        <div class="success-modal">
+            <div class="success-icon-box">
+                <i data-lucide="check" style="width: 36px; height: 36px;"></i>
+            </div>
+            <h3 class="success-title font-serif">Reservation Requested</h3>
+            <p class="success-message">Thank you for choosing Lisa. We have received your booking request for <span id="summary-service" style="font-weight:600; color:var(--color-gold-dark);"></span> on <span id="summary-date" style="font-weight:600;"></span> at <span id="summary-time" style="font-weight:600;"></span>. Our concierge team will call you shortly to confirm your booking.</p>
+            <button class="btn btn-gold" id="success-modal-close" style="width:100%;">Got It, Thanks</button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // 1. STICKY NAVBAR SCROLL ACTION
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // 2. ACTIVE NAV LINK HIGHLIGHT ON SCROLL
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // 3. MOBILE MENU OPEN/CLOSE
+        const drawerOpenBtn = document.getElementById('drawer-open-btn');
+        const drawerCloseBtn = document.getElementById('drawer-close-btn');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleDrawer() {
+            mobileNavOverlay.classList.toggle('open');
+            document.body.style.overflow = mobileNavOverlay.classList.contains('open') ? 'hidden' : 'auto';
+        }
+
+        drawerOpenBtn.addEventListener('click', toggleDrawer);
+        drawerCloseBtn.addEventListener('click', toggleDrawer);
+        mobileNavLinks.forEach(link => link.addEventListener('click', toggleDrawer));
+
+        // Close drawer when clicking outside content area
+        mobileNavOverlay.addEventListener('click', (e) => {
+            if (e.target === mobileNavOverlay) {
+                toggleDrawer();
+            }
+        });
+
+        // 4. INTERACTIVE SERVICES TAB FILTER
+        const tabBtns = document.querySelectorAll('.services-tabs .tab-btn');
+        const serviceCards = document.querySelectorAll('.service-card');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Set active tab button
+                tabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter cards
+                const filterValue = btn.getAttribute('data-filter');
+                
+                serviceCards.forEach(card => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(15px)';
+                    
+                    setTimeout(() => {
+                        if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'flex';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 50);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    }, 300);
+                });
+            });
+        });
+
+        // 5. INTERACTIVE GALLERY FILTER
+        const galleryFilterBtns = document.querySelectorAll('.gallery-filters .tab-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryFilterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                galleryFilterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filterValue = btn.getAttribute('data-gallery-filter');
+                
+                galleryItems.forEach(item => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.95)';
+                    
+                    setTimeout(() => {
+                        if (filterValue === 'all' || item.getAttribute('data-gallery-cat') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 50);
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    }, 300);
+                });
+            });
+        });
+
+        // 6. PRICING TABS SWITCHER
+        const pricingTabBtns = document.querySelectorAll('.pricing-tabs .tab-btn');
+        const pricingLists = document.querySelectorAll('.pricing-list-wrapper');
+
+        pricingTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                pricingTabBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const targetTabId = btn.getAttribute('data-pricing-tab');
+                
+                pricingLists.forEach(list => {
+                    list.classList.remove('active');
+                    if (list.getAttribute('id') === targetTabId) {
+                        list.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // 7. TESTIMONIALS SLIDER
+        const track = document.getElementById('testimonials-track');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.getElementById('slide-prev');
+        const nextBtn = document.getElementById('slide-next');
+        const dotsContainer = document.getElementById('slider-dots');
+        let currentIndex = 0;
+
+        // Create dots based on count of slides
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.slider-dot');
+
+        function updateSlider() {
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateSlider();
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            updateSlider();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
+
+        // Auto slide testimonials every 8 seconds
+        let autoSlideInterval = setInterval(() => {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        }, 8000);
+
+        // Pause auto-sliding on manual controls interaction
+        [prevBtn, nextBtn, dotsContainer].forEach(elem => {
+            elem.addEventListener('click', () => {
+                clearInterval(autoSlideInterval);
+            });
+        });
+
+        // 8. APPOINTMENT FORM RESERVATION LOGIC
+        const appointmentForm = document.getElementById('appointment-form');
+        const successModalOverlay = document.getElementById('success-modal-overlay');
+        const successModalClose = document.getElementById('success-modal-close');
+        
+        // Disable past dates in date picker
+        const dateInput = document.getElementById('book-date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Collect Form Values
+            const name = document.getElementById('book-name').value;
+            const phone = document.getElementById('book-phone').value;
+            const service = document.getElementById('book-service').value;
+            const date = document.getElementById('book-date').value;
+            const time = document.getElementById('book-time').value;
+
+            // Form Validation (Fallback check)
+            if(!name || !phone || !service || !date || !time) return;
+
+            // Format date for display
+            const formattedDate = new Date(date).toLocaleDateString('en-IN', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Populate Success Modal Data
+            document.getElementById('summary-service').innerText = service;
+            document.getElementById('summary-date').innerText = formattedDate;
+            document.getElementById('summary-time').innerText = time;
+
+            // Show Success Modal
+            successModalOverlay.classList.add('active');
+            
+            // Reset Form
+            appointmentForm.reset();
+        });
+
+        successModalClose.addEventListener('click', () => {
+            successModalOverlay.classList.remove('active');
+        });
+
+        // Close modal clicking outside container
+        successModalOverlay.addEventListener('click', (e) => {
+            if (e.target === successModalOverlay) {
+                successModalOverlay.classList.remove('active');
+            }
+        });
+
+        // 9. ANIMATIONS ON SCROLL (REVEAL INTERSECTION OBSERVER)
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Trigger only once
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        // Smooth Scroll anchors fallback
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    
+                    // Adjust scroll position to account for sticky header height
+                    const headerOffset = 90;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
